@@ -1,11 +1,16 @@
+import ProizvodKartica from "./ProizvodKartica";
 
-function Korpa() {
+function Korpa({proizvodi,onAdd,onRemove}) {
     return (
   
-      <div className="">
-       
-      <h1>Korpa</h1>
-     </div>
+        <div className="all-products">
+        {proizvodi .map((p) => (
+    
+        <ProizvodKartica product={p} key={p.id} onAdd={onAdd} onRemove={onRemove}  />
+
+    ))}
+
+   </div>
       
     );
   }

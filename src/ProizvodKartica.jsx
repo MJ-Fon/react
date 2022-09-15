@@ -1,6 +1,6 @@
  
  import {BsPlusLg, BsDashLg} from "react-icons/bs"
-function ProizvodKartica({product}) {
+function ProizvodKartica({product,onAdd,onRemove}) {
     return (
   
         <div className="card">
@@ -20,13 +20,13 @@ function ProizvodKartica({product}) {
             <h3 className="amount">Kolicina:  {product.amount}</h3>
             <button
               className="btn"
-            //   onClick={() => onAdd(product.id)}
+               onClick={() => onAdd(product.id)}
             >
             <BsPlusLg />
           </button>
           <button 
             className="btn"
-           //</div> onClick={() => onRemove( product.id)}
+            onClick={() => onRemove( product.id)}
            >
             <BsDashLg />
           </button>

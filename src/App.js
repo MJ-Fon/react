@@ -118,18 +118,44 @@ function App() {
   ]);
 
 
+  const [cartProducts, setCartProducts] = useState([]);
 
+  function refreshCart() {
+    let u_korpi = products.filter((p) => p.amount > 0);
+    setCartProducts (u_korpi);
+  }
+  function dodajUKorpu( id) {
+    
+   
+    products.forEach((p) => {
+      if (p.id === id) {
+        p.amount++;
+      }
+    });
+    refreshCart();
 
+  }
+ 
+  function izbrisiIzkorpe( id) {
+    
 
+    products.forEach((p) => {
+      if (p.id === id) {
+        p.amount--; 
+      }
+    });
+    refreshCart();
+
+  }
 
   return (
     <div  >
     <BrowserRouter  >
       <Navbar ></Navbar>
       <Routes>
-        <Route path="/" element={<Proizvodi proizvodi={products}></Proizvodi>}></Route>
+        <Route path="/" element={<Proizvodi proizvodi={products} onAdd={dodajUKorpu} onRemove={izbrisiIzkorpe}></Proizvodi>}></Route>
         <Route path="/kontakt" element={<Kontakt></Kontakt>}></Route>
-        <Route path="/korpa" element={<Korpa></Korpa>}></Route>
+        <Route path="/korpa" element={<Korpa proizvodi={cartProducts} onAdd={dodajUKorpu} onRemove={izbrisiIzkorpe}> </Korpa>}></Route>
 
         
       </Routes>
