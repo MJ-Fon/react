@@ -105,3 +105,93 @@
         height: 200px;
     }
   }
+
+
+  /* za kartice*/
+
+* {
+    box-sizing: border-box;
+  }
+  body{
+      margin: 0;
+  }
+   
+   
+  .card {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+  }
+  .card-header img {
+    width: 100%;
+   
+    object-fit: cover;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 250px;
+    
+  }
+  .naslovKartice{
+    font-size:25px;
+  }
+  .opisProizvoda{
+    font-size:25px;
+  }
+  .cenaRegularna{
+    font-size:250px;
+    text-decoration:  
+    line-through;margin:0
+  }
+  .cenaPopust{
+    font-size:25px;
+  }
+  .tag {
+   
+    border-radius: 50px;
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .tag-teal {
+    background-color: #47bcd4;
+  }
+  .tag-purple {
+    background-color: #5e76bf;
+  }
+  .tag-pink {
+    background-color: #cd5b9f;
+  }
+  
+  .card-body p {
+    font-size: 13px;
+    margin: 0 0 40px;
+  }
+  .card-img-top{
+    height:300px;
+    width: auto;
+  } 
+  
+  
+  /*za div u kom se nalaze sve kartice*/
+  .all-products{
+   
+     
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:9%;
+    margin-top: 50px;
+  
+    
+  }

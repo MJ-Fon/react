@@ -1,11 +1,17 @@
+import ProizvodKartica from "./ProizvodKartica";
+
  
  
-function Proizvodi() {
+function Proizvodi({proizvodi}) {
   return (
 
-    <div className="">
-     
-    <h1>AAA</h1>
+    <div className="all-products">
+        {proizvodi .map((p) => (
+    
+        <ProizvodKartica product={p} key={p.id}   />
+
+    ))}
+
    </div>
     
   );
