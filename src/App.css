@@ -195,3 +195,22 @@
   
     
   }
+
+  
+/*za dugmice sa ikonicama*/
+.btn {
+    background-color: #5e76bf;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 3px;
+    border-radius: 3px;
+    border-width: 0px;
+  }
+  
+  .btn:hover{
+    background-color: #5ebfaa;
+  
+  }
